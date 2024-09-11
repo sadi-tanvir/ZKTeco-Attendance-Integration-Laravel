@@ -15,13 +15,13 @@ A PHP-based integration solution for ZKTeco devices, focusing on attendance mana
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/sadi-tanvir/ZKTeco-Attendance-Integration-Laravel.git
+    git clone https://github.com/your-username/ZKTeco-Attendance-Integration-PHP.git
     ```
 
 2. **Navigate to the project directory**:
 
     ```bash
-    cd ZKTeco-Attendance-Integration-Laravel
+    cd ZKTeco-Attendance-Integration-PHP
     ```
 
 3. **Install dependencies**:
@@ -36,6 +36,12 @@ A PHP-based integration solution for ZKTeco devices, focusing on attendance mana
 
     ```bash
     cp .env.example .env
+    ```
+
+    Add the following line to your `.env` file to specify the API URL:
+
+    ```env
+    CMS_API_URL=https://example.com/api/create-attendance
     ```
 
 5. **Generate application key**:

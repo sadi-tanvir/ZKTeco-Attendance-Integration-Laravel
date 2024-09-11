@@ -25,6 +25,7 @@ class AttendanceController extends Controller
             // Retrieve the IP address from the request
             $ip_address = '192.168.0.99';
             $port = 4370; // Default to 4370 if not provided
+            $apiUrl = env('CMS_API_URL');
 
             // Initialize ZKTeco with the provided IP address and port
             $this->zk = new ZKTeco($ip_address, $port);
@@ -80,12 +81,12 @@ class AttendanceController extends Controller
                                 ]);
 
 
-                        $response = Http::post('https://cms.nedubd.com/api/create-attendance', [
+                        $response = Http::post($apiUrl, [
                             'student_id' => $record['id'],
                             'in_time' => $last_in,
                             'out_time' => $record['timestamp'],
                             'machine_no' => $serialNumber,
-                            'date' =>Carbon::parse($record['timestamp'])->format('Y-m-d')
+                            'date' => Carbon::parse($record['timestamp'])->format('Y-m-d')
                         ]);
                         // Log::info('Create Response status: ' . $response->status());
                         // Log::info('Create Response body: ' . $response->body());
@@ -98,7 +99,7 @@ class AttendanceController extends Controller
                             'time_calc' => 0,
                             'date' => Carbon::parse($record['timestamp'])->format('Y-m-d')
                         ]);
-                        $response = Http::post('https://cms.nedubd.com/api/create-attendance', [
+                        $response = Http::post($apiUrl, [
                             'student_id' => $record['id'],
                             'in_time' => $record['timestamp'],
                             'out_time' => null,
