@@ -15,13 +15,13 @@ A PHP-based integration solution for ZKTeco devices, focusing on attendance mana
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/your-username/ZKTeco-Attendance-Integration-PHP.git
+    git clone https://github.com/your-username/ZKTeco-Attendance-Integration-Laravel.git
     ```
 
 2. **Navigate to the project directory**:
 
     ```bash
-    cd ZKTeco-Attendance-Integration-PHP
+    cd ZKTeco-Attendance-Integration-Laravel
     ```
 
 3. **Install dependencies**:
