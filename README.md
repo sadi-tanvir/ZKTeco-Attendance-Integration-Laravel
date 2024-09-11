@@ -15,7 +15,7 @@ A PHP-based integration solution for ZKTeco devices, focusing on attendance mana
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/your-username/ZKTeco-Attendance-Integration-Laravel.git
+    git clone https://github.com/sadi-tanvir/ZKTeco-Attendance-Integration-Laravel.git
     ```
 
 2. **Navigate to the project directory**:
@@ -38,11 +38,20 @@ A PHP-based integration solution for ZKTeco devices, focusing on attendance mana
     cp .env.example .env
     ```
 
-    Add the following line to your `.env` file to specify the API URL:
+    ### Configure API URL
+    
+    To send attendance information to your database, you need to specify your API URL in the `.env` file. Follow these steps:
+    
+    1. **Open your `.env` file**.
+    
+    2. **Add the following line** to specify your API endpoint. Replace `https://example.com/api/create-attendance` with your actual API URL:
 
     ```env
     CMS_API_URL=https://example.com/api/create-attendance
     ```
+
+This configuration allows your application to send attendance data to the specified API endpoint.
+
 
 5. **Generate application key**:
 
